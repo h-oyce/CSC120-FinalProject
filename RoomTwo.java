@@ -2,7 +2,7 @@ public class RoomTwo {
     
     private String rmName = "Sally's Room";
     private String rmDescription = "Supposedly you can hear the giggles of a little ghost girl in here..." ;
-    private String[] rmObjects = {"baby doll", "Hand Mirror"};
+    private String[] rmObjects = {"baby doll", "Hand Mirror", "Toy Ball"};
 
 
 

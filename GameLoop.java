@@ -14,9 +14,9 @@ public class GameLoop {
         String userResponse = "";
 
         // This could be replaced with a more interesting opening
-        System.out.println("******************");
-        System.out.println("WELCOME TO MY GAME");
-        System.out.println("******************");
+        System.out.println("*****************************************");
+        System.out.println("WELCOME TO The Haunting of Hollow's House");
+        System.out.println("*****************************************");
 
         // Instructions are sometimes helpful
         System.out.println("Enter WIN to win, LOSE to lose, anything else to continue playing.");
