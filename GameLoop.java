@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class GameLoop {
 
     public static void main(String[] args) {
+        HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4, "Hollow's House is.....");
+
+
 
         // This is a "flag" to let us know when the loop should end
         boolean stillPlaying = true;
@@ -16,28 +19,36 @@ public class GameLoop {
         // This could be replaced with a more interesting opening
         System.out.println("******************");
         System.out.println("WELCOME TO THE HAUNTING OF HOLLOW'S HOUSE");
-        System.out.println("******************");
+        System.out.println("*****************\n");
+
+        System.out.println(hollowsHouse);
 
         // Instructions are sometimes helpful
-        System.out.println("Enter ENTER HOUSE to continue playing.");
+        System.out.println("The purpose of this game is to xyz \n");
+        System.out.println("Type ENTER HOUSE to continue playing: \n");
+            userInput.nextLine();
+        
 
-        // if(userResponse = "ENTER HOUSE"){            <------------------------------ pseudocode for the start of the game 
-        //     System.out.println(HauntedHouse);        <------------------------------ prints out all of the available rooms, maybe actions?
-        // }
-
-        // The do...while structure means we execute the body of the loop once before
+        do {// The do...while structure means we execute the body of the loop once before
         // checking the stopping condition
-        do {
+     
             // ************************************************
             // The stuff that happens in your game will go here
             // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-            System.out.println("You are still playing. Follow the instructions if you want to win/lose...");
+            if(userResponse == "ENTER HOUSE"){
+                System.out.println(hollowsHouse.enter());  
+                System.out.println("You are still playing. Follow the instructions if you want to win/lose..."); 
+                
+            }
+            else {
+                System.out.println("Come back if you want to test your courage.");
+            }
             userResponse = userInput.nextLine().toUpperCase();
 
             // ***********************************************************************
             // And as the player interacts, you'll check to see if the game should end
             // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-            if (userResponse.equals("WIN") || userResponse.equals("LOSE")) {
+            if (userResponse.equals("LEAVE") || userResponse.equals("LOSE")) {
                 stillPlaying = false;
             }
         } while (stillPlaying);
