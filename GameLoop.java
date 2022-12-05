@@ -24,10 +24,21 @@ public class GameLoop {
         System.out.println(hollowsHouse);
 
         // Instructions are sometimes helpful
-        System.out.println("The purpose of this game is to xyz \n");
-        System.out.println("Type ENTER HOUSE to continue playing: \n");
+        System.out.println("The purpose of this game is to xyz. Right now you're standing outside of Hollow's House. It appears to be haunted by ghosts. \n");
+
+        System.out.println("Do you believe in ghosts?\n");
             userInput.nextLine();
-        
+
+        /* if yes then use P1 if no then use P2 <================================== choosing character before starting game*/
+        // Player believer = new Player(userResponse, stillPlaying)
+        // Player denier = new Player(userResponse, stillPlaying)
+
+
+        System.out.println("Type ENTER HOUSE to continue playing: \n");
+
+            userInput.nextLine();
+           
+    
 
         do {// The do...while structure means we execute the body of the loop once before
         // checking the stopping condition
@@ -35,13 +46,14 @@ public class GameLoop {
             // ************************************************
             // The stuff that happens in your game will go here
             // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-            if(userResponse == "ENTER HOUSE"){
-                System.out.println(hollowsHouse.enter());  
-                System.out.println("You are still playing. Follow the instructions if you want to win/lose..."); 
-                
+            hollowsHouse.enter();  
+            System.out.println("You are still playing. Follow the instructions if you want to win/lose..."); 
+            
+            if(userResponse.equals("ENTER HOUSE")){
+         
             }
-            else {
-                System.out.println("Come back if you want to test your courage.");
+            else{
+                System.out.println("Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
             }
             userResponse = userInput.nextLine().toUpperCase();
 
@@ -50,7 +62,9 @@ public class GameLoop {
             // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
             if (userResponse.equals("LEAVE") || userResponse.equals("LOSE")) {
                 stillPlaying = false;
+                System.out.println("Come back if you want to test your courage.");
             }
+
         } while (stillPlaying);
 
         // Tidy up
@@ -58,6 +72,7 @@ public class GameLoop {
 
         // Once you exit the loop, you may need to deal with various possible stopping
         // conditions
+
         if (userResponse.equals("WIN")) {
             System.out.println("Yay, you won!");
         } else { // userResponse.equals("LOSE")
