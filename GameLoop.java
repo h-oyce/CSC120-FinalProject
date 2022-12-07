@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class GameLoop {
 
     public static void main(String[] args) {
-        HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4, "Hollow's House is.....");
+        HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4, " Hollow's House is.....");
 
 
 
@@ -35,21 +35,20 @@ public class GameLoop {
 
 
         System.out.println("Type ENTER HOUSE to continue playing: \n");
+        userInput.nextLine();
 
-            userInput.nextLine();
-           
-    
+            
 
         do {// The do...while structure means we execute the body of the loop once before
         // checking the stopping condition
      
             // ************************************************
             // The stuff that happens in your game will go here
-            // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-            hollowsHouse.enter();  
-            System.out.println("You are still playing. Follow the instructions if you want to win/lose..."); 
-            
+            // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓         
+           
             if(userResponse.equals("ENTER HOUSE")){
+                hollowsHouse.enter();  
+                System.out.println("You are still playing. Follow the instructions if you want to win/lose..."); 
          
             }
             else{
@@ -64,6 +63,34 @@ public class GameLoop {
                 stillPlaying = false;
                 System.out.println("Come back if you want to test your courage.");
             }
+
+
+            /************************************************************************
+            // Potential messages that will print out based on the players win status
+            //↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ */
+            
+            /*when stillPlaying ==false;
+            if player Won:
+            System.out.println("Congratulations. You made it out of Hollow's House. You've also helped Hollow's spirit lay to rest. etcetcetc");
+
+            else if player Neutral:
+            if player believes in ghosts
+                System.out.println("You've made it out of the house! It was pretty scary, but a lot of things just seemed to be a coincidence... Was there really a ghost here?");
+
+            else if player doesn't believe in ghosts
+                System.out.println("You've made it out of the house! It felt like a waste of your time, nothing seemed out of the ordinary -- just an old house. Ghosts aren't real.");
+            
+            else //player Lost:
+                System.out.println("!!!");
+                
+                if player believes in ghosts:
+                System.out.println("Look on the bright side, you've proven that ghosts are real. Unfortunately you became possessed in the process.");
+
+                if player doesn't believe in ghosts:
+                System.out.println("Ghosts are real after all. Unfortunately you had to find out the hard way.");
+                */
+
+            
 
         } while (stillPlaying);
 
