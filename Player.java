@@ -3,7 +3,7 @@ import java.util.Hashtable;
 public class Player {
     public String name;
     public boolean belief;
-    public double hauntChance;
+    public int health;
     public String description;
     public Hashtable<String, Boolean> inventory;
 
@@ -11,14 +11,14 @@ public class Player {
         this.name = name;
         this.belief = belief;
         this.description = description;
-        this.hauntChance = 1000.00;
+        this.health = 5;
         this.inventory = new Hashtable<String, Boolean>();
 
     }
 
-    public double changeChance(double newChance) {// changes the hauntChance
-        this.hauntChance = newChance;
-        return this.hauntChance;
+    public int healthDecrease() {// changes the hauntChance
+        this.health -= 1;
+        return this.health;
     }
 
     public void addInventory(Boolean evidence, String object) {// adds obejcts or evidence to player's inventory

@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class GameLoop {
 
     public static void main(String[] args) {
-        HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4, " Hollow's House is.....");
+        HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4,
+                " Hollow's House is.....");
 
         Player ryan = new Player("Ryan", true, "");
         Player shane = new Player("Shane", false, "");
@@ -34,7 +35,7 @@ public class GameLoop {
                 "The purpose of this game is to xyz. Right now you're standing outside of Hollow's House. It appears to be haunted by ghosts. \n");
 
         System.out.println("Do you believe in ghosts?\n");
-        userInput.nextLine();
+        String ghostResponse = userInput.nextLine();
 
         /*
          * if yes then use P1 if no then use P2 <==================================
@@ -44,22 +45,22 @@ public class GameLoop {
         // Player denier = new Player(userResponse, stillPlaying)
 
         System.out.println("Type ENTER HOUSE to continue playing: \n");
-        userResponse= userInput.nextLine().toUpperCase();
+        userResponse = userInput.nextLine().toUpperCase();
 
         do {// The do...while structure means we execute the body of the loop once before
             // checking the stopping condition
 
             // ************************************************
             // The stuff that happens in your game will go here
-            // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓         
-           
-            if(userResponse.equals("ENTER HOUSE")){
-                hollowsHouse.enter();  
-                System.out.println("You are still playing. Follow the instructions if you want to win/lose..."); 
-         
-            }
-            else{
-                System.out.println("Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
+            // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+
+            if (userResponse.equals("ENTER HOUSE")) {
+                hollowsHouse.enter();
+                System.out.println("You are still playing. Follow the instructions if you want to win/lose...");
+
+            } else {
+                System.out.println(
+                        "Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
 
             }
             userResponse = userInput.nextLine().toUpperCase();
@@ -72,33 +73,42 @@ public class GameLoop {
                 System.out.println("Come back if you want to test your courage.");
             }
 
-
             /************************************************************************
-            // Potential messages that will print out based on the players win status
-            //↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ */
-            
-            /*when stillPlaying ==false;
-            if player Won:
-            System.out.println("Congratulations. You made it out of Hollow's House. You've also helped Hollow's spirit lay to rest. etcetcetc");
+             * // Potential messages that will print out based on the players win status
+             * //↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+             */
 
-            else if player Neutral:
-            if player believes in ghosts
-                System.out.println("You've made it out of the house! It was pretty scary, but a lot of things just seemed to be a coincidence... Was there really a ghost here?");
-
-            else if player doesn't believe in ghosts
-                System.out.println("You've made it out of the house! It felt like a waste of your time, nothing seemed out of the ordinary -- just an old house. Ghosts aren't real.");
-            
-            else //player Lost:
-                System.out.println("!!!");
-                
-                if player believes in ghosts:
-                System.out.println("Look on the bright side, you've proven that ghosts are real. Unfortunately you became possessed in the process.");
-
-                if player doesn't believe in ghosts:
-                System.out.println("Ghosts are real after all. Unfortunately you had to find out the hard way.");
-                */
-
-            
+            /*
+             * when stillPlaying ==false;
+             * if player Won:
+             * System.out.
+             * println("Congratulations. You made it out of Hollow's House. You've also helped Hollow's spirit lay to rest. etcetcetc"
+             * );
+             * 
+             * else if player Neutral:
+             * if player believes in ghosts
+             * System.out.
+             * println("You've made it out of the house! It was pretty scary, but a lot of things just seemed to be a coincidence... Was there really a ghost here?"
+             * );
+             * 
+             * else if player doesn't believe in ghosts
+             * System.out.
+             * println("You've made it out of the house! It felt like a waste of your time, nothing seemed out of the ordinary -- just an old house. Ghosts aren't real."
+             * );
+             * 
+             * else //player Lost:
+             * System.out.println("!!!");
+             * 
+             * if player believes in ghosts:
+             * System.out.
+             * println("Look on the bright side, you've proven that ghosts are real. Unfortunately you became possessed in the process."
+             * );
+             * 
+             * if player doesn't believe in ghosts:
+             * System.out.
+             * println("Ghosts are real after all. Unfortunately you had to find out the hard way."
+             * );
+             */
 
         } while (stillPlaying);
 
