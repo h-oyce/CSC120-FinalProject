@@ -5,8 +5,8 @@ public class GameLoop {
     public static void main(String[] args) {
         HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4, " Hollow's House is.....");
 
-        Player ryan = new Player("Ryan", true);
-        Player shane = new Player("Shane", false);
+        Player ryan = new Player("Ryan", true, "");
+        Player shane = new Player("Shane", false, "");
 
         Rooms one = new Rooms("The Attic", "Upper level");
         Rooms two = new Rooms("Sally's Room", "bedroom");

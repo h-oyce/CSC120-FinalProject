@@ -4,14 +4,15 @@ public class Player {
     public String name;
     public boolean belief;
     public double hauntChance;
-    public Hashtable<Boolean, String> inventory;
+    public String description;
+    public Hashtable<String, Boolean> inventory;
 
     public Player(String name, boolean belief, String description) {
         this.name = name;
         this.belief = belief;
         this.description = description;
         this.hauntChance = 1000.00;
-        this.inventory = new Hashtable<Boolean, String>();
+        this.inventory = new Hashtable<String, Boolean>();
 
     }
 
