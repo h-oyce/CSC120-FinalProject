@@ -22,7 +22,7 @@ public class Player {
     }
 
     public void addInventory(Boolean evidence, String object) {// adds obejcts or evidence to player's inventory
-        this.inventory.put(evidence, object);
+        this.inventory.put(object, evidence);
     }
 
     public String checkActions(String roomName) {
