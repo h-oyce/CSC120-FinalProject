@@ -44,7 +44,7 @@ public class GameLoop {
         // Player denier = new Player(userResponse, stillPlaying)
 
         System.out.println("Type ENTER HOUSE to continue playing: \n");
-        userInput.nextLine();
+        userResponse= userInput.nextLine().toUpperCase();
 
         do {// The do...while structure means we execute the body of the loop once before
             // checking the stopping condition
