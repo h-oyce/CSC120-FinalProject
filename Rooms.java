@@ -8,7 +8,7 @@ public class Rooms
     private ArrayList<String> roomObjects;
     private int numberOfItems;
 
-    public Rooms(String roomName, String roomDescription, String[] roomObjects)
+    public Rooms(String roomName, String roomDescription)
     {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
