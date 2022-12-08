@@ -31,7 +31,7 @@ public class HauntedHouse{
     /*Navigation Methods? */
 
     public HauntedHouse enter(){
-        System.out.println("You've entered " + this.name + " located at " + this.address);
+        System.out.println("You've entered " + this.name +".");
         return this;
     }
 
@@ -40,7 +40,7 @@ public class HauntedHouse{
     }
 
     public String toString(){
-        return (this.name + " is a haunted house located at " + this.address + ".");
+        return (this.name + " is a haunted house located at " + this.address + "." + this.description);
     }
     public static void main(String args[]){
         
