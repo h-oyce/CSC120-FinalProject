@@ -5,7 +5,7 @@ public class Rooms
     public String roomName;
     public String roomDescription;
     //public String[] roomObjects;
-    private ArrayList<Items> roomObjects;
+    private ArrayList<String> roomObjects;
     private int numberOfItems;
 
     public Rooms(String roomName, String roomDescription, String[] roomObjects)
@@ -13,7 +13,7 @@ public class Rooms
         this.roomName = roomName;
         this.roomDescription = roomDescription;
         //this.roomObjects = roomObjects;
-        roomObjects = new ArrayList<>();
+        this.roomObjects = new ArrayList<>();
         
 
     }
@@ -33,19 +33,19 @@ public class Rooms
         //return this.roomObjects.toString();
     //}
 
-    public ArrayList<Items>  getObjects() {
+    public ArrayList<String>  getObjects() {
         return roomObjects;
            }
         
-        public void addObject(Items item){
+        public void addObject(String item){
         roomObjects.add(item);
            }
-        public void dropObject(Items item){
+        public void dropObject(String item){
         roomObjects.remove(item);
            }
         
        
-        public void setContents(ArrayList<Items> contents) {
+        public void setContents(ArrayList<String> contents) {
         this.roomObjects = contents;
            }
        
