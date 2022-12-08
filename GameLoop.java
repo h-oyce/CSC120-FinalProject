@@ -5,7 +5,8 @@ public class GameLoop {
     public static void main(String[] args) {
         HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4, " Hollow's House is.....");
 
-
+        Player ryan = new Player("Ryan", true);
+        Player shane = new Player("Shane", false);
 
         // This is a "flag" to let us know when the loop should end
         boolean stillPlaying = true;
@@ -24,24 +25,25 @@ public class GameLoop {
         System.out.println(hollowsHouse);
 
         // Instructions are sometimes helpful
-        System.out.println("The purpose of this game is to xyz. Right now you're standing outside of Hollow's House. It appears to be haunted by ghosts. \n");
+        System.out.println(
+                "The purpose of this game is to xyz. Right now you're standing outside of Hollow's House. It appears to be haunted by ghosts. \n");
 
         System.out.println("Do you believe in ghosts?\n");
-            userInput.nextLine();
+        userInput.nextLine();
 
-        /* if yes then use P1 if no then use P2 <================================== choosing character before starting game*/
+        /*
+         * if yes then use P1 if no then use P2 <==================================
+         * choosing character before starting game
+         */
         // Player believer = new Player(userResponse, stillPlaying)
         // Player denier = new Player(userResponse, stillPlaying)
-
 
         System.out.println("Type ENTER HOUSE to continue playing: \n");
         userInput.nextLine();
 
-            
-
         do {// The do...while structure means we execute the body of the loop once before
-        // checking the stopping condition
-     
+            // checking the stopping condition
+
             // ************************************************
             // The stuff that happens in your game will go here
             // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓         
@@ -53,6 +55,7 @@ public class GameLoop {
             }
             else{
                 System.out.println("Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
+
             }
             userResponse = userInput.nextLine().toUpperCase();
 

@@ -6,9 +6,10 @@ public class Player {
     public double hauntChance;
     public Hashtable<Boolean, String> inventory;
 
-    public Player(String name, boolean belief) {
+    public Player(String name, boolean belief, String description) {
         this.name = name;
         this.belief = belief;
+        this.description = description;
         this.hauntChance = 1000.00;
         this.inventory = new Hashtable<Boolean, String>();
 
@@ -21,5 +22,37 @@ public class Player {
 
     public void addInventory(Boolean evidence, String object) {// adds obejcts or evidence to player's inventory
         this.inventory.put(evidence, object);
+    }
+
+    public String checkActions(String roomName) {
+        if (this.belief = true) {
+            if (roomName.equals("The Attic")) {
+                return "actions1";
+            }
+            if (roomName.equals("Sally's Room")) {
+                return "actions2";
+            }
+            if (roomName.equals("The Kitchen")) {
+                return "actions3";
+            }
+            if (roomName.equals("The Basement")) {
+                return "actions4";
+            }
+        }
+        if (this.belief = false) {
+            if (roomName.equals("The Attic")) {
+                return "actions1";
+            }
+            if (roomName.equals("Sally's Room")) {
+                return "actions2";
+            }
+            if (roomName.equals("The Kitchen")) {
+                return "actions3";
+            }
+            if (roomName.equals("The Basement")) {
+                return "actions4";
+            }
+        }
+        return "Room not found";
     }
 }
