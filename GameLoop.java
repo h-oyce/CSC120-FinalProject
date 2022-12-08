@@ -8,6 +8,11 @@ public class GameLoop {
         Player ryan = new Player("Ryan", true);
         Player shane = new Player("Shane", false);
 
+        Rooms one = new Rooms("The Attic", "Upper level");
+        Rooms two = new Rooms("Sally's Room", "bedroom");
+        Rooms three = new Rooms("The Kitchen", "kitchen");
+        Rooms four = new Rooms("The Basement", "basement");
+
         // This is a "flag" to let us know when the loop should end
         boolean stillPlaying = true;
 
