@@ -35,9 +35,10 @@ public class HauntedHouse{
         return this;
     }
 
-    public void showOptions(){
-        System.out.println("");
-    }
+    // public void showOptions(){
+    //     System.out.println("Here are the ");
+    
+    // }
 
     public String toString(){
         return (this.name + " is a haunted house located at " + this.address + "." + this.description);

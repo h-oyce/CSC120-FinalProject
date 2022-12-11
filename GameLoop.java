@@ -9,10 +9,16 @@ public class GameLoop {
         Player ryan = new Player("Ryan", true, "");
         Player shane = new Player("Shane", false, "");
 
-        Rooms one = new Rooms("The Attic", "Upper level");
-        Rooms two = new Rooms("Sally's Room", "bedroom");
-        Rooms three = new Rooms("The Kitchen", "kitchen");
-        Rooms four = new Rooms("The Basement", "basement");
+        
+        Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n" + "All you see are SPIDER WEBS, PACKED BOXES -- what's inside them ? -- and a ROCKING CHAIR.\n");
+        Rooms two = new Rooms("SALLY'S ROOM ", " - According to legends, you can hear the giggles of a little ghost girl in here... \n" + "The room doesn't look suspicious, just old. You see a BABY DOLL on the bed, a HAND MIRROR on the vanity, and a TOY BALL on the floor.\n");
+        Rooms three = new Rooms("THE KITCHEN", " - Home cooked meals and flying plates...\n" + "You see the typical dining utensils -- except they're floating in the air. A KNIFE and a PLATE particularly stand out to you for some reason. On the wall is an EERIE FAMILY PORTRAIT.\n");
+        Rooms four = new Rooms("THE BASEMENT", " - Separated from the rest of the other rooms, the atmosphere feels completely different. This room reportedly has the most paranormal activity...\n" + "Seemingly random objects are strewn across the floor. This room could just be another storage space. You see an OLD ROCKING HORSE, a BROKEN GRANDFATHER CLOCK, a DUFFLE BAG, and a PROSTHETIC LEG.\n");
+
+        // System.out.println(one); ////////testing to make sure the rooms are printing out when called on
+        // System.out.println(two);
+        // System.out.println(three);
+        // System.out.println(four);
 
         // This is a "flag" to let us know when the loop should end
         boolean stillPlaying = true;
@@ -56,14 +62,50 @@ public class GameLoop {
 
             if (userResponse.equals("ENTER HOUSE")) {
                 hollowsHouse.enter();
-                System.out.println("You are still playing. Follow the instructions if you want to win/lose...");
+                System.out.println("You are still playing. Follow the instructions if you want to win/lose...\n");
+                
+                /*Description for when Player enters */
+                System.out.println("You've entered the foyer of the house. After looking around for little, you find that almost all of the doors are locked. However, there appear to be four rooms that can be entered:\n");
+                //Lists out room options for player. Does not mprovide roomDescription unless the Player enters the house.
+                    System.out.println(one.roomName +"\n" + two.roomName +"\n" + three.roomName+"\n" + four.roomName+"\n");
+                    System.out.println("Which room would you like to explore first?"); //asks Player to select a room to explore
+                        userResponse = userInput.nextLine().toUpperCase(); //scans and stores the user response
 
-            } else {
+                        if(userResponse.equals("THE ATTIC")){
+                            System.out.println("\n" + one);
+                            ryan.checkActions("THE ATTIC");
+                        }
+
+                        else if(userResponse.equals("SALLY'S ROOM")){
+                            System.out.println("\n" + two);
+                        }
+
+                        else if(userResponse.equals("THE KITCHEN")){
+                            System.out.println("\n" + three);
+                        }
+
+                        else if(userResponse.equals("THE BASEMENT")){
+                            System.out.println("\n" + four);
+                        }
+                    
+                        else{
+                            System.out.println("This room can't be accessed.");
+                        }
+                    }
+                    
+
+
+            else {
                 System.out.println(
                         "Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
 
             }
             userResponse = userInput.nextLine().toUpperCase();
+
+            
+
+
+            
 
             // ***********************************************************************
             // And as the player interacts, you'll check to see if the game should end

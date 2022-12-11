@@ -53,4 +53,16 @@ public class Rooms
         numberOfItems = roomObjects.size();
         return numberOfItems;
            }
-}
+
+    public String toString(){
+        return (this.roomName +  this.roomDescription);
+        }
+
+  
+    }
+       
+
+    
+
+
+    
