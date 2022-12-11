@@ -7,7 +7,6 @@ public class GameLoop {
                 " Hollow's House is.....");
 
         Player ryan = new Player("Ryan", true, "");
-        Player shane = new Player("Shane", false, "");
 
         
         Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n" + "All you see are SPIDER WEBS, PACKED BOXES -- what's inside them ? -- and a ROCKING CHAIR.\n");
@@ -73,7 +72,7 @@ public class GameLoop {
 
                         if(userResponse.equals("THE ATTIC")){
                             System.out.println("\n" + one);
-                            shane.checkActions("THE ATTIC");
+                            ryan.checkActions("THE ATTIC");
                         }
 
                         else if(userResponse.equals("SALLY'S ROOM")){
