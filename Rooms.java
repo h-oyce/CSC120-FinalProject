@@ -4,7 +4,6 @@ public class Rooms
 {
     public String roomName;
     public String roomDescription;
-    //public String[] roomObjects;
     private ArrayList<String> roomObjects;
     private int numberOfItems;
 
