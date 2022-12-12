@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class Rooms
 {
     public String roomName;
@@ -27,10 +28,6 @@ public class Rooms
         return this.roomDescription;
     }
     
-    //public String getObject()
-    //{
-        //return this.roomObjects.toString();
-    //}
 
     public ArrayList<String>  getObjects() {
         return roomObjects;
