@@ -12,7 +12,6 @@ public class Rooms
     {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
-        //this.roomObjects = roomObjects;
         this.roomObjects = new ArrayList<>();
         
 
