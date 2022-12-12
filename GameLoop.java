@@ -72,7 +72,7 @@ public class GameLoop {
 
                         if(userResponse.equals("THE ATTIC")){
                             System.out.println("\n" + one);
-                            ryan.checkActions("THE ATTIC");
+                            Investigator.checkActions("THE ATTIC");
                         }
 
                         else if(userResponse.equals("SALLY'S ROOM")){
