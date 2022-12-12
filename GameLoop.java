@@ -4,9 +4,9 @@ public class GameLoop {
 
     public static void main(String[] args) {
         HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4,
-                " Hollow's House is.....");
+                " Hollow's House is [supposedly] a haunted house, haunted by the late resident's daughter, Sally. Ever since the family passed away, nobody has been able to move in. Eerie incidents, screams heard at night, and strange shadows lurking around the corners of each room have left the house deserted. \n ");
 
-        Player Investigator = new Player("Paranormal Investigator", true, "");
+        Player Investigator = new Player("Paranormal Investigator", true, "You are an investigator who believes in the existence of ghosts. After several incidents and paranormal activity sightings surrounding Hollow's House, you have been called by the neighborhood to explore Hollow's House.");
 
         
         Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n" + "All you see are SPIDER WEBS, PACKED BOXES -- what's inside them ? -- and a ROCKING CHAIR.\n");
@@ -37,7 +37,7 @@ public class GameLoop {
 
         // Instructions are sometimes helpful
         System.out.println(
-                "The purpose of this game is to xyz. Right now you're standing outside of Hollow's House. It appears to be haunted by ghosts. \n");
+                "The purpose of this game is to explore Hollow's House. As you explore, you can interact and collect objects as evidence to prove (or disprove) the existence of a ghost. However, while some objects are evidence, some are haunted. By obtaining enough evidence, you will come out of Hollow's House safe and sound. But if you collect too many objects that are haunted, you will become possessed! Right now you're standing outside of Hollow's House. It appears to be haunted by a ghost. \n");
 
         System.out.println("Do you believe in ghosts?\n");
         String ghostResponse = userInput.nextLine();
