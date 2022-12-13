@@ -6,18 +6,15 @@ public class GameLoop {
         HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4,
                 " Hollow's House is [supposedly] a haunted house, haunted by the late resident's daughter, Sally. Ever since the family passed away, nobody has been able to move in. Eerie incidents, screams heard at night, and strange shadows lurking around the corners of each room have left the house deserted. \n ");
 
-        Player Investigator = new Player("Paranormal Investigator", true, "You are an investigator who believes in the existence of ghosts. After several incidents and paranormal activity sightings surrounding Hollow's House, you have been called by the neighborhood to explore Hollow's House.");
+        Player Investigator = new Player("Paranormal Investigator", true, "After several incidents and paranormal activity sightings surrounding Hollow's House, you, a PARANORMAL INVESTIGATOR, have been called by the neighborhood to explore Hollow's House.");
 
         
         Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n" + "All you see are SPIDER WEBS, PACKED BOXES -- what's inside them ? -- and a ROCKING CHAIR.\n");
         Rooms two = new Rooms("SALLY'S ROOM ", " - According to legends, you can hear the giggles of a little ghost girl in here... \n" + "The room doesn't look suspicious, just old. You see a BABY DOLL on the bed, a HAND MIRROR on the vanity, and a TOY BALL on the floor.\n");
         Rooms three = new Rooms("THE KITCHEN", " - Home cooked meals and flying plates...\n" + "You see the typical dining utensils -- except they're floating in the air. A KNIFE and a PLATE particularly stand out to you for some reason. On the wall is an EERIE FAMILY PORTRAIT.\n");
         Rooms four = new Rooms("THE BASEMENT", " - Separated from the rest of the other rooms, the atmosphere feels completely different. This room reportedly has the most paranormal activity...\n" + "Seemingly random objects are strewn across the floor. This room could just be another storage space. You see an OLD ROCKING HORSE, a BROKEN GRANDFATHER CLOCK, a DUFFLE BAG, and a PROSTHETIC LEG.\n");
+        Rooms foyer = new Rooms("FOYER", " - You've returned back to the foyer. \n");
 
-        // System.out.println(one); ////////testing to make sure the rooms are printing out when called on
-        // System.out.println(two);
-        // System.out.println(three);
-        // System.out.println(four);
 
         // This is a "flag" to let us know when the loop should end
         boolean stillPlaying = true;
@@ -29,18 +26,17 @@ public class GameLoop {
         String userResponse = "";
 
         // This could be replaced with a more interesting opening
-        System.out.println("******************");
+        System.out.println("******************************************");
         System.out.println("WELCOME TO THE HAUNTING OF HOLLOW'S HOUSE");
-        System.out.println("*****************\n");
+        System.out.println("******************************************\n");
 
         System.out.println(hollowsHouse);
 
         // Instructions are sometimes helpful
         System.out.println(
-                "The purpose of this game is to explore Hollow's House. As you explore, you can interact and collect objects as evidence to prove (or disprove) the existence of a ghost. However, while some objects are evidence, some are haunted. By obtaining enough evidence, you will come out of Hollow's House safe and sound. But if you collect too many objects that are haunted, you will become possessed! Right now you're standing outside of Hollow's House. It appears to be haunted by a ghost. \n");
+                "The purpose of this game is to explore Hollow's House. As you explore, you can interact and collect objects as evidence to prove (or disprove) the existence of a ghost. By obtaining enough evidence, you will come out of Hollow's House safe and sound. But if you collect too many objects that are haunted, you will become possessed! Right now you're standing outside of Hollow's House. It appears to be haunted by a ghost. \n");
 
-        System.out.println("Do you believe in ghosts?\n");
-        String ghostResponse = userInput.nextLine();
+       
 
         /*
          * if yes then use P1 if no then use P2 <==================================
@@ -61,39 +57,77 @@ public class GameLoop {
 
             if (userResponse.equals("ENTER HOUSE")) {
                 hollowsHouse.enter();
-                System.out.println("You are still playing. Follow the instructions if you want to win/lose...\n");
+                // System.out.println("You are still playing. Follow the instructions if you want to win/lose...\n");
                 
                 /*Description for when Player enters */
-                System.out.println("You've entered the foyer of the house. After looking around for little, you find that almost all of the doors are locked. However, there appear to be four rooms that can be entered:\n");
+                System.out.println("You've entered THE FOYER of the house. After looking around for little, you find that almost all of the doors are locked. However, there appear to be four rooms that can be entered:\n");
                 //Lists out room options for player. Does not mprovide roomDescription unless the Player enters the house.
-                    System.out.println(one.roomName +"\n" + two.roomName +"\n" + three.roomName+"\n" + four.roomName+"\n");
-                    System.out.println("Which room would you like to explore first?"); //asks Player to select a room to explore
+                   
+                String continueExploring = "";
+                
+                Boolean stillExploring = true;
+                    if (continueExploring.equals("NO")){
+                        stillExploring = false;
+                         }
+
+                    System.out.println("Which room would you like to explore?"); //asks Player to select a room to explore
+                    while(stillExploring){
+                   
+                    System.out.println( "\n"+ one.roomName +"\n" + two.roomName +"\n" + three.roomName+"\n" + four.roomName+"\n" + foyer.roomName+ "\n");
                         userResponse = userInput.nextLine().toUpperCase(); //scans and stores the user response
+                        
+                        
+                            if(userResponse.equals("THE ATTIC")){
+                                System.out.println("\n" + one);
+                                Investigator.checkActions("THE ATTIC");
+                            }
 
-                        if(userResponse.equals("THE ATTIC")){
-                            System.out.println("\n" + one);
-                            Investigator.checkActions("THE ATTIC");
-                        }
+                            else if(userResponse.equals("SALLY'S ROOM")){
+                                System.out.println("\n" + two);
+                            }
 
-                        else if(userResponse.equals("SALLY'S ROOM")){
-                            System.out.println("\n" + two);
-                        }
+                            else if(userResponse.equals("THE KITCHEN")){
+                                System.out.println("\n" + three);
+                            }
 
-                        else if(userResponse.equals("THE KITCHEN")){
-                            System.out.println("\n" + three);
-                        }
+                            else if(userResponse.equals("THE BASEMENT")){
+                                System.out.println("\n" + four);
+                            }
 
-                        else if(userResponse.equals("THE BASEMENT")){
-                            System.out.println("\n" + four);
-                        }
+                            else if(userResponse.equals("FOYER")){
+                                System.out.println("\n"+ foyer);
+                            }
+                        
+                            else{
+                                System.out.println("This room can't be accessed.");
+                            }
+
+                            System.out.println("Would you like to keep exploring?");
+                            continueExploring = userInput.nextLine().toUpperCase();
+                                if (continueExploring.equals("NO")){
+                                    stillExploring = false;
+                                }
+
+                           } 
+                           System.out.println("Do you believe in ghosts?\n");
+                                String ghostResponse = userInput.nextLine().toUpperCase();
                     
-                        else{
-                            System.out.println("This room can't be accessed.");
-                        }
-                    }
+                                    if(ghostResponse.equals("YES")){
+                                        System.out.println("Ghosts are...");
+                                    }
+                                    else if (ghostResponse.equals("NO")){
+                                        System.out.println("Ghosts aren't");
+                                    }
+                                    else{
+                                        System.out.println("Sorry, I didn't understand that. Do you think ghosts exist?");
+                                    }
+                        
+                              
                     
+                }
 
-
+                  
+            
             else {
                 System.out.println(
                         "Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
@@ -101,9 +135,8 @@ public class GameLoop {
             }
             userResponse = userInput.nextLine().toUpperCase();
 
-            
 
-
+    
             
 
             // ***********************************************************************
@@ -117,38 +150,6 @@ public class GameLoop {
             /************************************************************************
              * // Potential messages that will print out based on the players win status
              * //↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-             */
-
-            /*
-             * when stillPlaying ==false;
-             * if player Won:
-             * System.out.
-             * println("Congratulations. You made it out of Hollow's House. You've also helped Hollow's spirit lay to rest. etcetcetc"
-             * );
-             * 
-             * else if player Neutral:
-             * if player believes in ghosts
-             * System.out.
-             * println("You've made it out of the house! It was pretty scary, but a lot of things just seemed to be a coincidence... Was there really a ghost here?"
-             * );
-             * 
-             * else if player doesn't believe in ghosts
-             * System.out.
-             * println("You've made it out of the house! It felt like a waste of your time, nothing seemed out of the ordinary -- just an old house. Ghosts aren't real."
-             * );
-             * 
-             * else //player Lost:
-             * System.out.println("!!!");
-             * 
-             * if player believes in ghosts:
-             * System.out.
-             * println("Look on the bright side, you've proven that ghosts are real. Unfortunately you became possessed in the process."
-             * );
-             * 
-             * if player doesn't believe in ghosts:
-             * System.out.
-             * println("Ghosts are real after all. Unfortunately you had to find out the hard way."
-             * );
              */
 
         } while (stillPlaying);
