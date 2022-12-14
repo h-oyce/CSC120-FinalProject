@@ -22,7 +22,7 @@ public class GameLoop {
                         + "Seemingly random objects are strewn across the floor. This room could just be another storage space. You see an OLD ROCKING HORSE, a BROKEN GRANDFATHER CLOCK, a DUFFLE BAG, and a PROSTHETIC LEG.\n");
         Rooms foyer = new Rooms("FOYER", " - You've returned back to the foyer. \n");
 
-        Images hhImage = new Images("Images/HauntedHouse");
+        Images hhImage = new Images("Images/HauntedHouse.jpg");
 
         // This is a "flag" to let us know when the loop should end
         boolean stillPlaying = true;
