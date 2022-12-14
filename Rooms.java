@@ -3,7 +3,7 @@ public class Rooms
     public String roomName;
     public String roomDescription;
 
-    public Rooms(String roomName, String roomDescription,)
+    public Rooms(String roomName, String roomDescription)
     {
         this.roomName = roomName;
         this.roomDescription = roomDescription;

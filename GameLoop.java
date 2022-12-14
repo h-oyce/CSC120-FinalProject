@@ -7,8 +7,8 @@ public class GameLoop {
         HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4,
                 " Hollow's House is [supposedly] a haunted house, haunted by the late resident's daughter, Sally. Ever since the family passed away, nobody has been able to move in. Eerie incidents, screams heard at night, and strange shadows lurking around the corners of each room have left the house deserted. \n ");
 
-        Player Investigator = new Player("Paranormal Investigator", true,
-                "After several incidents and paranormal activity sightings surrounding Hollow's House, you, a PARANORMAL INVESTIGATOR, have been called by the neighborhood to explore Hollow's House.");
+       // Player Investigator = new Player("Paranormal Investigator", true,
+                //"After several incidents and paranormal activity sightings surrounding Hollow's House, you, a PARANORMAL INVESTIGATOR, have been called by the neighborhood to explore Hollow's House.");
 
         Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n"
                 + "All you see is a BROKEN MIRROR, an OLD VANITY -- There are too many mirrors in this house. -- and a ROCKING HORSE.\n");
@@ -115,6 +115,20 @@ public class GameLoop {
                         System.out.println("\n" + two);
                         System.out.println("Let's see what objects we can learn about in here"+ "\n"+ "Which object would you like to pick up?");
                         System.out.println("\n" + doll.roomObjects + "\n" + handmirror.roomObjects + "\n" + ballerinajewelrybox.roomObjects);
+                        if (userResponse.equals("BABY DOLL")) {
+                            System.out.println("\n" + doll);
+                        }
+                        else if (userResponse.equals("HAND MIRROR")){
+                            System.out.println("\n" + handmirror);
+                        }
+                        else if(userResponse.equals("BALLERINA JEWELRY BOX")){
+                            System.out.println("\n" + ballerinajewelrybox);
+                        }
+                        else if(userResponse.equals("BACK")){
+                            System.out.println("\n" + doll.roomObjects + "\n" + handmirror.roomObjects + "\n" + ballerinajewelrybox.roomObjects);
+                            System.out.println("\n"+ "If you would like to try a different room, enter it's name ->");
+                        }
+
                     }
 
                     else if (userResponse.equals("THE KITCHEN")) {
