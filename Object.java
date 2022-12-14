@@ -20,9 +20,6 @@ public class Object {
     return this.objectDescriptions;
 }
 
-public String addString(){
-    return (this.roomObjects + this.objectDescriptions);
-}
 
 public String toString(){
     return(this.roomObjects + this.objectDescriptions);
