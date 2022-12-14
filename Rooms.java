@@ -1,19 +1,12 @@
-import java.util.ArrayList;
-
-
 public class Rooms
 {
     public String roomName;
     public String roomDescription;
-    private ArrayList<String> roomObjects;
-    private int numberOfItems;
 
-    public Rooms(String roomName, String roomDescription)
+    public Rooms(String roomName, String roomDescription,)
     {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
-        this.roomObjects = new ArrayList<>();
-        
 
     }
 
@@ -26,28 +19,9 @@ public class Rooms
     {
         return this.roomDescription;
     }
-    
 
-    public ArrayList<String>  getObjects() {
-        return roomObjects;
-           }
-        
-        public void addObject(String item){
-        roomObjects.add(item);
-           }
-        public void dropObject(String item){
-        roomObjects.remove(item);
-           }
-        
-       
-        public void setContents(ArrayList<String> contents) {
-        this.roomObjects = contents;
-           }
-       
-        public int getNumberOfThings() {
-        numberOfItems = roomObjects.size();
-        return numberOfItems;
-           }
+
+
 
     public String toString(){
         return (this.roomName +  this.roomDescription);

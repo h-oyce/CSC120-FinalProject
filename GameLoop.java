@@ -11,16 +11,32 @@ public class GameLoop {
                 "After several incidents and paranormal activity sightings surrounding Hollow's House, you, a PARANORMAL INVESTIGATOR, have been called by the neighborhood to explore Hollow's House.");
 
         Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n"
-                + "All you see are SPIDER WEBS, PACKED BOXES -- what's inside them ? -- and a ROCKING CHAIR.\n");
+                + "All you see is a BROKEN MIRROR, an OLD VANITY -- There are too many mirrors in this house. -- and a ROCKING HORSE.\n");
         Rooms two = new Rooms("SALLY'S ROOM ",
                 " - According to legends, you can hear the giggles of a little ghost girl in here... \n"
-                        + "The room doesn't look suspicious, just old. You see a BABY DOLL on the bed, a HAND MIRROR on the vanity, and a TOY BALL on the floor.\n");
+                        + "The room doesn't look suspicious, just old. You see a BABY DOLL on the bed, and a HAND MIRROR and BALLERINA JEWELRY BOX on the vanity.\n");
         Rooms three = new Rooms("THE KITCHEN", " - Home cooked meals and flying plates...\n"
-                + "You see the typical dining utensils -- except they're floating in the air. A KNIFE and a PLATE particularly stand out to you for some reason. On the wall is an EERIE FAMILY PORTRAIT.\n");
+                + "You see the typical dining utensils -- except they're floating in the air. A KNIFE and an OLD NEWSPAPER particularly stand out to you for some reason. On the wall is an EERIE FAMILY PORTRAIT.\n");
         Rooms four = new Rooms("THE BASEMENT",
                 " - Separated from the rest of the other rooms, the atmosphere feels completely different. This room reportedly has the most paranormal activity...\n"
-                        + "Seemingly random objects are strewn across the floor. This room could just be another storage space. You see an OLD ROCKING HORSE, a BROKEN GRANDFATHER CLOCK, a DUFFLE BAG, and a PROSTHETIC LEG.\n");
+                        + "Seemingly random objects are strewn across the floor. This room could just be another storage space. You see a BROKEN GRANDFATHER CLOCK, a DUFFLE BAG, and a CREAKING CHAIR.\n");
         Rooms foyer = new Rooms("FOYER", " - You've returned back to the foyer. \n");
+
+        Object rockinghorse = new Object("ROCKING HORSE \n", "There has been recorded footage of this rocking by itself" );
+        Object brokenmirror = new Object("BROKEN MIRROR \n", "If you stare at yourself too long you'll start to see your features become distorted");
+        Object oldvanity = new Object("OLD VANITY \n", "The current real estate owners have no idea how this even got in the attic, it weighs close to 250 pounds!");
+        
+        Object doll = new Object("BABY DOLL \n", "inanimate objects are often believed to be vessels for ghosts...");
+        Object handmirror = new Object("HAND MIRROR \n", "You caught your reflection and something else when you accidently looked into the mirror...");
+        Object ballerinajewelrybox = new Object("BALLERINA JEWELRY BOX \n", "The box, now empty still plays a tune. It's somewhat out of tune but after a few seconds you can tell that it's playing Beetoven's Moonlight Sonata");
+        
+        Object creepyportraits = new Object("CREEPY PORTRAIT \n", "There's so many pictures in here, no matter where you go you can feel their eyes on you.");
+        Object rustyknifes = new Object("RUSTY KNIFE \n", "We should put these away somewhere more safe. There have been reports of knifes flying around");
+        Object oldnewspaper = new Object("OLD NEWSPAPER \n", "Wow, this paper dates back to the 50's!");
+
+        Object creakingchair = new Object("CREAKING CHAIR \n", "This chair would be too dangerous to try and sit in. It's rotting and falling apart.");
+        Object dufflebag = new Object("DUFFLE BAG \n", "EEK! The scent of mildew is surrounding this bag, it also seems to be leaking a dark liquid?!");
+        Object grandfatherclock = new Object("BROKEN GRANDFATHER CLOCK \n", "Every now and then this clock lets out a lound chime. I wonder how it's still ticking?");
 
         Images hhImage = new Images("Images/HauntedHouse.jpg");
 
@@ -88,20 +104,29 @@ public class GameLoop {
                     userResponse = userInput.nextLine().toUpperCase(); // scans and stores the user response
 
                     if (userResponse.equals("THE ATTIC")) {
-                        System.out.println("\n" + one);
-                        Investigator.checkActions("THE ATTIC");
+                        System.out.println("\n" + one + "\n");
+                        System.out.println("Let's explore, looks like there's some odd items in here"+ "\n"+ "Which object would you like to learn about?");
+                        System.out.println("\n" + rockinghorse.roomObjects + "\n" + brokenmirror.roomObjects + "\n" + oldvanity.roomObjects);
+
+                        //Investigator.checkActions("THE ATTIC");
                     }
 
                     else if (userResponse.equals("SALLY'S ROOM")) {
                         System.out.println("\n" + two);
+                        System.out.println("Let's see what objects we can learn about in here"+ "\n"+ "Which object would you like to pick up?");
+                        System.out.println("\n" + doll.roomObjects + "\n" + handmirror.roomObjects + "\n" + ballerinajewelrybox.roomObjects);
                     }
 
                     else if (userResponse.equals("THE KITCHEN")) {
                         System.out.println("\n" + three);
+                        System.out.println("There's a lot of activity in this room"+ "\n"+ "Which item would you like to learn about first?");
+                        System.out.println("\n" + creepyportraits.roomObjects + "\n" + rustyknifes.roomObjects + "\n" + oldnewspaper.roomObjects);
                     }
 
                     else if (userResponse.equals("THE BASEMENT")) {
                         System.out.println("\n" + four);
+                        System.out.println("It's so cold down here but we should still explore."+ "\n"+ "What do you want to look at first?");
+                        System.out.println("\n" + creakingchair.roomObjects + "\n" + dufflebag.roomObjects + "\n" + grandfatherclock.roomObjects);
                     }
 
                     else if (userResponse.equals("FOYER")) {
