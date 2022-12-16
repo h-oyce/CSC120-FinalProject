@@ -5,11 +5,13 @@
  * @return Prints information of the Object instances that Player can interact with as they explore.
  */
  
+
 public class Object {
 
     public String roomObjects;
     public String objectDescriptions;
 
+    /*Constructor */
     public Object(String roomObjects, String objectDescriptions)
     {
         this.roomObjects = roomObjects;
@@ -17,6 +19,7 @@ public class Object {
         
     }
 
+    /*Accessors */
     public String getObject()
     {
         return this.roomObjects;
@@ -28,7 +31,7 @@ public class Object {
 }
 
 
-public String toString(){
+public String toString(){ //prints out the object name and the object description
     return(this.roomObjects + this.objectDescriptions);
 }
 
