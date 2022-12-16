@@ -4,7 +4,7 @@
  * @param HauntedHouse, Room, Player, Object
  * @return Futher actions and questions to determine how the Player will proceed and their ending.
  */
- 
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -14,8 +14,8 @@ public class GameLoop {
         HauntedHouse hollowsHouse = new HauntedHouse("Hollow's House", "1234 Somewhere Ave", 4,
                 " Hollow's House is [supposedly] a haunted house, haunted by the late resident's daughter, Sally. Ever since the family passed away, nobody has been able to move in. Eerie incidents, screams heard at night, and strange shadows lurking around the corners of each room have left the house deserted. \n ");
 
-       // Player Investigator = new Player("Paranormal Investigator", true,
-                //"After several incidents and paranormal activity sightings surrounding Hollow's House, you, a PARANORMAL INVESTIGATOR, have been called by the neighborhood to explore Hollow's House.");
+        Player Investigator = new Player("Paranormal Investigator",
+                "After several incidents and paranormal activity sightings surrounding Hollow's House, you, a PARANORMAL INVESTIGATOR, have been called by the neighborhood to explore Hollow's House.");
 
         Rooms one = new Rooms("THE ATTIC ", " - It's too quiet in here, you can hear every creak and shuffle...\n"
                 + "All you see is a BROKEN MIRROR, an OLD VANITY -- There are too many mirrors in this house. -- and a ROCKING HORSE.\n");
@@ -29,21 +29,31 @@ public class GameLoop {
                         + "Seemingly random objects are strewn across the floor. This room could just be another storage space. You see a BROKEN GRANDFATHER CLOCK, a DUFFLE BAG, and a CREAKING CHAIR.\n");
         Rooms foyer = new Rooms("FOYER", " - You've returned back to the foyer. \n");
 
-        Object rockinghorse = new Object("ROCKING HORSE \n", "There has been recorded footage of this rocking by itself \n" );
-        Object brokenmirror = new Object("BROKEN MIRROR \n", "If you stare at yourself too long you'll start to see your features become distorted\n");
-        Object oldvanity = new Object("OLD VANITY \n", "The current real estate owners have no idea how this even got in the attic, it weighs close to 250 pounds!\n");
-        
+        Object rockinghorse = new Object("ROCKING HORSE \n",
+                "There has been recorded footage of this rocking by itself \n");
+        Object brokenmirror = new Object("BROKEN MIRROR \n",
+                "If you stare at yourself too long you'll start to see your features become distorted\n");
+        Object oldvanity = new Object("OLD VANITY \n",
+                "The current real estate owners have no idea how this even got in the attic, it weighs close to 250 pounds!\n");
+
         Object doll = new Object("BABY DOLL \n", "inanimate objects are often believed to be vessels for ghosts...\n");
-        Object handmirror = new Object("HAND MIRROR \n", "You caught your reflection and something else when you accidently looked into the mirror...\n");
-        Object ballerinajewelrybox = new Object("BALLERINA JEWELRY BOX \n", "The box, now empty still plays a tune. It's somewhat out of tune but after a few seconds you can tell that it's playing Beetoven's Moonlight Sonata\n");
-        
-        Object creepyportraits = new Object("CREEPY PORTRAIT \n", "There's so many pictures in here, no matter where you go you can feel their eyes on you.\n");
-        Object rustyknifes = new Object("RUSTY KNIFE \n", "We should put these away somewhere more safe. There have been reports of knifes flying around\n");
+        Object handmirror = new Object("HAND MIRROR \n",
+                "You caught your reflection and something else when you accidently looked into the mirror...\n");
+        Object ballerinajewelrybox = new Object("BALLERINA JEWELRY BOX \n",
+                "The box, now empty still plays a tune. It's somewhat out of tune but after a few seconds you can tell that it's playing Beetoven's Moonlight Sonata\n");
+
+        Object creepyportraits = new Object("CREEPY PORTRAIT \n",
+                "There's so many pictures in here, no matter where you go you can feel their eyes on you.\n");
+        Object rustyknifes = new Object("RUSTY KNIFE \n",
+                "We should put these away somewhere more safe. There have been reports of knifes flying around\n");
         Object oldnewspaper = new Object("OLD NEWSPAPER \n", "Wow, this paper dates back to the 50's!\n");
 
-        Object creakingchair = new Object("CREAKING CHAIR \n", "This chair would be too dangerous to try and sit in. It's rotting and falling apart.\n");
-        Object dufflebag = new Object("DUFFLE BAG \n", "EEK! The scent of mildew is surrounding this bag, it also seems to be leaking a dark liquid?!\n");
-        Object grandfatherclock = new Object("BROKEN GRANDFATHER CLOCK \n", "Every now and then this clock lets out a lound chime. I wonder how it's still ticking?\n");
+        Object creakingchair = new Object("CREAKING CHAIR \n",
+                "This chair would be too dangerous to try and sit in. It's rotting and falling apart.\n");
+        Object dufflebag = new Object("DUFFLE BAG \n",
+                "EEK! The scent of mildew is surrounding this bag, it also seems to be leaking a dark liquid?!\n");
+        Object grandfatherclock = new Object("BROKEN GRANDFATHER CLOCK \n",
+                "Every now and then this clock lets out a lound chime. I wonder how it's still ticking?\n");
 
         Images hhImage = new Images("Images/HauntedHouse.jpg");
 
@@ -98,7 +108,8 @@ public class GameLoop {
 
                 String continueExploring = "";
 
-                Boolean stillExploring = true; //condition that will allow the player to continue exploring or stop exploring at any point
+                Boolean stillExploring = true; // condition that will allow the player to continue exploring or stop
+                                               // exploring at any point
                 if (continueExploring.equals("NO")) {
                     stillExploring = false;
                 }
@@ -114,18 +125,18 @@ public class GameLoop {
                         System.out.println("\n" + one + "\n");
                         System.out.println("Let's explore, looks like there's some odd items in here");
                         System.out.println("\n" + rockinghorse + "\n" + brokenmirror + "\n" + oldvanity);
-                        System.out.println( "\n"+ "Which object would you like to record for evidence?");
-                       
-                    userResponse=userInput.nextLine().toUpperCase();
+                        System.out.println("\n" + "Which object would you like to record for evidence?");
+
+                        userResponse = userInput.nextLine().toUpperCase();
                     }
 
                     else if (userResponse.equals("SALLY'S ROOM")) {
                         System.out.println("\n" + two);
                         System.out.println("Let's see what objects we can learn about in here");
                         System.out.println("\n" + doll + "\n" + handmirror + "\n" + ballerinajewelrybox);
-                        System.out.println( "\n"+ "Which object would you like to pick up?");
+                        System.out.println("\n" + "Which object would you like to pick up?");
 
-                    userResponse=userInput.nextLine().toUpperCase();
+                        userResponse = userInput.nextLine().toUpperCase();
 
                     }
 
@@ -133,18 +144,18 @@ public class GameLoop {
                         System.out.println("\n" + three);
                         System.out.println("There's a lot of activity in this room");
                         System.out.println("\n" + creepyportraits + "\n" + rustyknifes + "\n" + oldnewspaper);
-                        System.out.println( "\n"+ "Which item would you like to pick up?");
-                        
-                    userResponse=userInput.nextLine().toUpperCase();
+                        System.out.println("\n" + "Which item would you like to pick up?");
+
+                        userResponse = userInput.nextLine().toUpperCase();
                     }
 
                     else if (userResponse.equals("THE BASEMENT")) {
                         System.out.println("\n" + four);
                         System.out.println("It's so cold down here but we should still explore.");
                         System.out.println("\n" + creakingchair + "\n" + dufflebag + "\n" + grandfatherclock);
-                        System.out.println( "\n"+ "What do you want to record?");
-                       
-                    userResponse=userInput.nextLine().toUpperCase();
+                        System.out.println("\n" + "What do you want to record?");
+
+                        userResponse = userInput.nextLine().toUpperCase();
                     }
 
                     else if (userResponse.equals("FOYER")) {
@@ -157,102 +168,107 @@ public class GameLoop {
 
                     if (userResponse.equals("ROCKING HORSE")) {
                         System.out.println("\n" + "Rocking Horse! : object description recorded");
-                        //line to add to memory
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
+                        System.out.println(rockinghorse.action());
+                        Investigator.addMemory(userResponse, rockinghorse.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
                     }
-                
-                    else if (userResponse.equals("BROKEN MIRROR")){
-                       System.out.println("\n" + "Broken Mirror! : object description recorded");
-                      //line to add to "memory"
-                      System.out.println("\n"+ "PRESS ENTER");
-                       
+
+                    else if (userResponse.equals("BROKEN MIRROR")) {
+                        System.out.println("\n" + "Broken Mirror! : object description recorded");
+                        System.out.println(brokenmirror.action());
+                        Investigator.addMemory(userResponse, brokenmirror.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("OLD VANITY")) {
+                        System.out.println("\n" + "Old vanity!: object description recorded");
+                        System.out.println(oldvanity.action());
+                        Investigator.addMemory(userResponse, oldvanity.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
                     }
-                    else if(userResponse.equals("OLD VANITY")){
-                      System.out.println("\n" + "Old vanity!: object description recorded");
-                      //line to add to "memory"
-                      System.out.println("\n"+ "PRESS ENTER");
-                      
-                    }
-                   
+
                     else if (userResponse.equals("BABY DOLL")) {
                         System.out.println("\n" + "Baby doll!: object collected");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if (userResponse.equals("HAND MIRROR")){
+                        System.out.println(doll.action());
+                        Investigator.addMemory(userResponse, doll.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("HAND MIRROR")) {
                         System.out.println("\n" + "Hand mirror!: object collected");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if(userResponse.equals("BALLERINA JEWELRY BOX")){
+                        System.out.println(handmirror.action());
+                        Investigator.addMemory(userResponse, handmirror.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("BALLERINA JEWELRY BOX")) {
                         System.out.println("\n" + "Ballerina jewelrybox!: object collected");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
+                        System.out.println(ballerinajewelrybox.action());
+                        Investigator.addMemory(userResponse, ballerinajewelrybox.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
                     }
-                    
+
                     else if (userResponse.equals("CREEPY PORTRAIT")) {
                         System.out.println("\n" + "Creepy portrait!: object collected");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if (userResponse.equals("RUSTY KNIFE")){
+                        System.out.println(creepyportraits.action());
+                        Investigator.addMemory(userResponse, creepyportraits.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("RUSTY KNIFE")) {
                         System.out.println("\n" + "Rusty knife!: object collected");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if(userResponse.equals("OLD NEWSPAPER")){
+                        System.out.println(rustyknifes.action());
+                        Investigator.addMemory(userResponse, rustyknifes.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("OLD NEWSPAPER")) {
                         System.out.println("\n" + "Old newspaper!: object collected");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
+                        System.out.println(oldnewspaper.action());
+                        Investigator.addMemory(userResponse, oldnewspaper.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
                     }
 
                     else if (userResponse.equals("CREAKING CHAIR")) {
                         System.out.println("\n" + "Creaking chair!: object description recorded");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if (userResponse.equals("DUFFLE BAG")){
+                        System.out.println(creakingchair.action());
+                        Investigator.addMemory(userResponse, creakingchair.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("DUFFLE BAG")) {
                         System.out.println("\n" + "Duffle bag!: object description recorded");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if(userResponse.equals("BROKEN GRANDFATHER CLOCK")){
+                        System.out.println(dufflebag.action());
+                        Investigator.addMemory(userResponse, dufflebag.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("BROKEN GRANDFATHER CLOCK")) {
                         System.out.println("\n" + "Broken grandfather clock!: object description recorded");
-                        //line to add to "memory"
-                        System.out.println("\n"+ "PRESS ENTER");
-                        
-                    }
-                    else if(userResponse.equals("BACK")){
-                        System.out.println("\n"+ "If you would like to try a different room, keep exploring. Press Enter");
+                        System.out.println(grandfatherclock.action());
+                        Investigator.addMemory(userResponse, grandfatherclock.action());
+                        System.out.println("\n" + "PRESS ENTER");
+
+                    } else if (userResponse.equals("BACK")) {
+                        System.out.println(
+                                "\n" + "If you would like to try a different room, keep exploring. Press Enter");
                     }
 
                     else {
                         System.out.println(
                                 "Sorry, I didn't understand that. Please enter the name of an object in the room!");
-                                System.out.println("\n"+ "Press ENTER to take another look around");
-        
-                    }
-                    userResponse=userInput.nextLine().toUpperCase();
+                        System.out.println("\n" + "Press ENTER to take another look around");
 
-              
-                    System.out.println("Would you like to keep exploring? Press Enter"); //will print out the list of rooms if Player enters YES
+                    }
+                    userResponse = userInput.nextLine().toUpperCase();
+
+                    System.out.println("Would you like to keep exploring? Press Enter"); // will print out the list of
+                                                                                         // rooms if Player enters YES
                     continueExploring = userInput.nextLine().toUpperCase();
                     if (continueExploring.equals("NO")) {
                         stillExploring = false;
                     }
 
                 }
-                
-                /*The ending conditions */
+
+                /* The ending conditions */
                 System.out.println("Do you believe in ghosts?\n");
                 String ghostResponse = userInput.nextLine().toUpperCase();
 
@@ -266,7 +282,7 @@ public class GameLoop {
 
             }
 
-            else { //if the Player doesn't enter the house
+            else { // if the Player doesn't enter the house
                 System.out.println(
                         "Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
 
