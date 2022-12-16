@@ -110,7 +110,7 @@ public class GameLoop {
                         System.out.println( "\n"+ "Which object would you like to record for evidence?");
                         if (userResponse.equals("ROCKING HORSE")) {
                             System.out.println("\n" + rockinghorse);
-                            //line to add to "memory"
+                            //line to add to memory
                             System.out.println("\n"+ "object description recorded");
                         }
                         else if (userResponse.equals("BROKEN MIRROR")){
