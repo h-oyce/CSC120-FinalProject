@@ -1,3 +1,10 @@
+/*
+ * Object class
+ * Contains the attributes and constructor of Object, so we can create instances of objects in the GameLoop for the Player to interact with.
+ * @param String roomObjects, String objectDescriptions
+ * @return Prints information of the Object instances that Player can interact with as they explore.
+ */
+ 
 public class Object {
 
     public String roomObjects;
