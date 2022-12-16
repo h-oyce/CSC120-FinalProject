@@ -2,17 +2,15 @@ import java.util.Hashtable;
 
 public class Player {
     public String name;
-    public boolean belief;
     public int health;
     public String description;
-    public Hashtable<String, Boolean> inventory;
+    public Hashtable<String, String> memory;
 
-    public Player(String name, boolean belief, String description) {
+    public Player(String name, String description) {
         this.name = name;
-        this.belief = belief;
         this.description = description;
         this.health = 5;
-        this.inventory = new Hashtable<String, Boolean>();
+        this.memory = new Hashtable<String, String>();
 
     }
 
@@ -21,45 +19,12 @@ public class Player {
         return this.health;
     }
 
-    public void addInventory(Boolean evidence, String object) {// adds obejcts or evidence to player's inventory
-        this.inventory.put(object, evidence);
+    public void addMemory(String object, String description) {// adds obejcts or evidence to player's inventory
+        this.memory.put(object, description);
     }
 
-    public String checkActions(String roomName) {
-        if (this.belief = true) {
-            if (roomName.equals("The Attic")) {
-                return "actions1";
-            }
-            if (roomName.equals("Sally's Room")) {
-                return "actions2";
-            }
-            if (roomName.equals("The Kitchen")) {
-                return "actions3";
-            }
-            if (roomName.equals("The Basement")) {
-                return "actions4";
-            }
-        }
-        if (this.belief = false) {
-            if (roomName.equals("The Attic")) {
-                return "actions1";
-            }
-            if (roomName.equals("Sally's Room")) {
-                return "actions2";
-            }
-            if (roomName.equals("The Kitchen")) {
-                return "actions3";
-            }
-            if (roomName.equals("The Basement")) {
-                return "actions4";
-            }
-        }
-        return "Room not found";
+    public void printMemory() {
+        this.memory.toString();
     }
 
-           
-        
 }
-
-
-
