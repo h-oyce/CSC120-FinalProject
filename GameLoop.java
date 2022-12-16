@@ -105,8 +105,28 @@ public class GameLoop {
 
                     if (userResponse.equals("THE ATTIC")) {
                         System.out.println("\n" + one + "\n");
-                        System.out.println("Let's explore, looks like there's some odd items in here"+ "\n"+ "Which object would you like to learn about?");
+                        System.out.println("Let's explore, looks like there's some odd items in here");
                         System.out.println("\n" + rockinghorse + "\n" + brokenmirror + "\n" + oldvanity);
+                        System.out.println( "\n"+ "Which object would you like to record for evidence?");
+                        if (userResponse.equals("ROCKING HORSE")) {
+                            System.out.println("\n" + rockinghorse);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object description recorded");
+                        }
+                        else if (userResponse.equals("BROKEN MIRROR")){
+                            System.out.println("\n" + brokenmirror);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object description recorded");
+                        }
+                        else if(userResponse.equals("OLD VANITY")){
+                            System.out.println("\n" + oldvanity);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object description recorded");
+                        }
+                        else if(userResponse.equals("BACK")){
+                            System.out.println("\n" + rockinghorse + "\n" + brokenmirror + "\n" + oldvanity);
+                            System.out.println("\n"+ "If you would like to try a different room, enter it's name ->");
+                        }
                         userResponse=userInput.nextLine().toUpperCase();
 
                     
@@ -114,16 +134,23 @@ public class GameLoop {
 
                     else if (userResponse.equals("SALLY'S ROOM")) {
                         System.out.println("\n" + two);
-                        System.out.println("Let's see what objects we can learn about in here"+ "\n"+ "Which object would you like to pick up?");
+                        System.out.println("Let's see what objects we can learn about in here");
                         System.out.println("\n" + doll + "\n" + handmirror + "\n" + ballerinajewelrybox);
+                        System.out.println( "\n"+ "Which object would you like to pick up?");
                         if (userResponse.equals("BABY DOLL")) {
                             System.out.println("\n" + doll);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object collected");
                         }
                         else if (userResponse.equals("HAND MIRROR")){
                             System.out.println("\n" + handmirror);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object collected");
                         }
                         else if(userResponse.equals("BALLERINA JEWELRY BOX")){
                             System.out.println("\n" + ballerinajewelrybox);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object collected");
                         }
                         else if(userResponse.equals("BACK")){
                             System.out.println("\n" + doll + "\n" + handmirror + "\n" + ballerinajewelrybox);
@@ -135,15 +162,55 @@ public class GameLoop {
 
                     else if (userResponse.equals("THE KITCHEN")) {
                         System.out.println("\n" + three);
-                        System.out.println("There's a lot of activity in this room"+ "\n"+ "Which item would you like to learn about first?");
+                        System.out.println("There's a lot of activity in this room");
                         System.out.println("\n" + creepyportraits + "\n" + rustyknifes + "\n" + oldnewspaper);
+                        System.out.println( "\n"+ "Which item would you like to pick up?");
+                        if (userResponse.equals("CREEPY PORTRAIT")) {
+                            System.out.println("\n" + creepyportraits);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object collected");
+                        }
+                        else if (userResponse.equals("RUSTY KNIFE")){
+                            System.out.println("\n" + rustyknifes);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object collected");
+                        }
+                        else if(userResponse.equals("OLD NEWSPAPER")){
+                            System.out.println("\n" + oldnewspaper);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object collected");
+                        }
+                        else if(userResponse.equals("BACK")){
+                            System.out.println("\n" + creepyportraits + "\n" + rustyknifes + "\n" + oldnewspaper);
+                            System.out.println("\n"+ "If you would like to try a different room, enter it's name ->");
+                        }
                         userResponse=userInput.nextLine().toUpperCase();
                     }
 
                     else if (userResponse.equals("THE BASEMENT")) {
                         System.out.println("\n" + four);
-                        System.out.println("It's so cold down here but we should still explore."+ "\n"+ "What do you want to look at first?");
+                        System.out.println("It's so cold down here but we should still explore.");
                         System.out.println("\n" + creakingchair + "\n" + dufflebag + "\n" + grandfatherclock);
+                        System.out.println( "\n"+ "What do you want to record?");
+                        if (userResponse.equals("CREAKING CHAIR")) {
+                            System.out.println("\n" + creakingchair);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object description recorded");
+                        }
+                        else if (userResponse.equals("DUFFLE BAG")){
+                            System.out.println("\n" + dufflebag);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object description recorded");
+                        }
+                        else if(userResponse.equals("BROKEN GRANDFATHER CLOCK")){
+                            System.out.println("\n" + grandfatherclock);
+                            //line to add to "memory"
+                            System.out.println("\n"+ "object description recorded");
+                        }
+                        else if(userResponse.equals("BACK")){
+                            System.out.println("\n" + creakingchair + "\n" + dufflebag + "\n" + grandfatherclock);
+                            System.out.println("\n"+ "If you would like to try a different room, enter it's name ->");
+                        }
                         userResponse=userInput.nextLine().toUpperCase();
                     }
 
