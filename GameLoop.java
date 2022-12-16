@@ -1,3 +1,10 @@
+/*
+ * GameLoop class
+ * Runs the game and prints out the instructions and questions for the Player to answer, progress, and explore.
+ * @param HauntedHouse, Room, Player, Object
+ * @return Futher actions and questions to determine how the Player will proceed and their ending.
+ */
+ 
 import java.io.IOException;
 import java.util.Scanner;
 
