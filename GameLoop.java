@@ -98,7 +98,7 @@ public class GameLoop {
 
                 String continueExploring = "";
 
-                Boolean stillExploring = true;
+                Boolean stillExploring = true; //condition that will allow the player to continue exploring or stop exploring at any point
                 if (continueExploring.equals("NO")) {
                     stillExploring = false;
                 }
@@ -244,13 +244,15 @@ public class GameLoop {
                     userResponse=userInput.nextLine().toUpperCase();
 
               
-                    System.out.println("Would you like to keep exploring? Press Enter");
+                    System.out.println("Would you like to keep exploring? Press Enter"); //will print out the list of rooms if Player enters YES
                     continueExploring = userInput.nextLine().toUpperCase();
                     if (continueExploring.equals("NO")) {
                         stillExploring = false;
                     }
 
                 }
+                
+                /*The ending conditions */
                 System.out.println("Do you believe in ghosts?\n");
                 String ghostResponse = userInput.nextLine().toUpperCase();
 
@@ -264,7 +266,7 @@ public class GameLoop {
 
             }
 
-            else {
+            else { //if the Player doesn't enter the house
                 System.out.println(
                         "Sorry, I didn't understand that. If you would like to start playing, please type ENTER HOUSE.");
 
