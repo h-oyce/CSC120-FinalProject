@@ -126,8 +126,10 @@ public class GameLoop {
                             Investigator.addMemory(userResponse2, rockinghorse.action());
                         } else if (userResponse2.equals("BROKEN MIRROR")) {
                             System.out.println(brokenmirror.action());
+                            Investigator.addMemory(userResponse2, brokenmirror.action());
                         } else if (userResponse2.equals("OLD VANITY")) {
                             System.out.println(oldvanity.action());
+                            Investigator.addMemory(userResponse2, oldvanity.action());
                         } else {
                             System.out.println("You look around, you can't find the object you were looking for.");
                         }
@@ -142,10 +144,13 @@ public class GameLoop {
 
                         if (userResponse2.equals("BABY DOLL")) {
                             System.out.println(doll.action());
+                            Investigator.addMemory(userResponse2, doll.action());
                         } else if (userResponse2.equals("HAND MIRROR")) {
                             System.out.println(handmirror.action());
+                            Investigator.addMemory(userResponse2, handmirror.action());
                         } else if (userResponse2.equals("BALLERINA JEWELRY BOX")) {
                             System.out.println(ballerinajewelrybox.action());
+                            Investigator.addMemory(userResponse2, ballerinajewelrybox.action());
                         } else {
                             System.out.println("You look around, you can't find the object you were looking for.");
                         }
@@ -160,10 +165,13 @@ public class GameLoop {
 
                         if (userResponse2.equals("CREEPY PORTRAIT")) {
                             System.out.println(creepyportraits.action());
+                            Investigator.addMemory(userResponse2, creepyportraits.action());
                         } else if (userResponse2.equals("RUSTY KNIFE")) {
                             System.out.println(rustyknifes.action());
+                            Investigator.addMemory(userResponse2, rustyknifes.action());
                         } else if (userResponse2.equals("OLD NEWSPAPER")) {
                             System.out.println(oldnewspaper.action());
+                            Investigator.addMemory(userResponse2, oldnewspaper.action());
                         } else {
                             System.out.println("You look around, you can't find the object you were looking for.");
                         }
@@ -178,10 +186,13 @@ public class GameLoop {
 
                         if (userResponse2.equals("CREAKING CHAIR")) {
                             System.out.println(creakingchair.action());
+                            Investigator.addMemory(userResponse2, creakingchair.action());
                         } else if (userResponse2.equals("DUFFLE BAG")) {
                             System.out.println(dufflebag.action());
+                            Investigator.addMemory(userResponse2, dufflebag.action());
                         } else if (userResponse2.equals("BROKEN GRANDFATHER CLOCK")) {
                             System.out.println(grandfatherclock.action());
+                            Investigator.addMemory(userResponse2, grandfatherclock.action());
                         } else {
                             System.out.println("You look around, you can't find the object you were looking for.");
                         }

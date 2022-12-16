@@ -35,17 +35,17 @@ public class Object {
         } else if (this.roomObjects.equals("BALLERINA JEWELRY BOX \n")) {
             return "Atop of Sally's vanity, there is a jewelery box with a ballerina figurine. It's perminently posed on one leg with her arms above her head. \n You reach to pick it up. \n Before you get the chance, the ballerina begins to slowly spin as some notes play.";
         } else if (this.roomObjects.equals("CREEPY PORTRAIT \n")) {
-            return "j";
+            return "Across the room, a portrait of a woman hangs. Her blank stare pierced through you. \n As you move closer, her eyes seem to follow you. \n She blinks, or at least you think she blinks.";
         } else if (this.roomObjects.equals("RUSTY KNIFE \n")) {
-            return "j";
+            return "A rusty olf knife sits on the kitchen counter. The blade is completely brown and bumpy, and the wooden handle is nearly falling off. \n You pick it up to examine it. Flipping it over, a thick black liquid begins to ooze off of it \n You put it back down and whip you hands off. What that stuff always on it?";
         } else if (this.roomObjects.equals("OLD NEWSPAPER \n")) {
-            return "j";
+            return "A rolled up newspaper sits on the dining table. You pick it up and unroll it to read. \n The top says THE CLAREFIELD CHRONICLE. Its the paper from July 9, 1972. \n There's an advertisement on the front page stating this house is on sale.";
         } else if (this.roomObjects.equals("CREAKY CHAIR \n")) {
-            return "j";
+            return "You approach the chair on the side of the room. The floor squeaks underneath your feet. \n The wood has water damage all over, but nothing else really stands out. ";
         } else if (this.roomObjects.equals("DUFFLE BAG \n")) {
-            return "j";
+            return "You walk to the back corner where a large duffle bag is placed on the floor. It is fill of something, seeming like it'd rip apart if it was filled anymore. \n As you crouch down to examine further, you think you see something move. \n You take a step back. ";
         } else if (this.roomObjects.equals("BROKEN GRANDFATHER CLOCK \n")) {
-            return "j";
+            return "The large grandfather clock faces you in the entry way of the basement. You walk closer to get a better look at it. \n The arms and pendulum are still, although they look to be in good condition. \n You see yourself reflected in the glass of the clock. You look different, maybe even older.";
         } else {
             return "Sorry, we could not find that object";
         }
