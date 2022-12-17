@@ -6,6 +6,7 @@
  */
 
 import java.util.Hashtable; //to store memory of the objects that the player has interacted with throughout the game.
+import java.util.Set;
 
 public class Player {
     public String name;
@@ -24,8 +25,18 @@ public class Player {
         this.memory.put(object, description);
     }
 
-    public void printMemory() {
-        this.memory.toString();
+    public String printMemory() {
+        String statement = "";
+        Set<java.lang.String> keys = this.memory.keySet();
+
+        for (String key : keys) {
+            statement += "\n" + key + "\n" + this.memory.get(key);
+        }
+        return statement;
+    }
+
+    public Hashtable giveMemory() {
+        return this.memory;
     }
 
 }

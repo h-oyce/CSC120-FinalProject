@@ -6,7 +6,9 @@
  */
 
 import java.io.IOException;
+import java.util.Hashtable;
 import java.util.Scanner;
+import java.util.Set;
 
 public class GameLoop {
 
@@ -269,13 +271,32 @@ public class GameLoop {
                 }
 
                 /* The ending conditions */
+                System.out
+                        .println("\n Here's everything you experienced in Hollow's House \n"
+                                + Investigator.printMemory());
                 System.out.println("Do you believe in ghosts?\n");
                 String ghostResponse = userInput.nextLine().toUpperCase();
+                Hashtable memory = Investigator.giveMemory();
+                Set<java.lang.String> keys = memory.keySet();
 
                 if (ghostResponse.equals("YES")) {
-                    System.out.println("Ghosts are...");
+                    if (keys.contains("BROKEN MIRROR") || (keys.equals("BABY DOLL")) || (keys.equals("RUSTY KNIFE"))
+                            || (keys.equals("DUFFLE BAG"))) {
+                        System.out.println(
+                                "You believe in ghosts and your experiences in Hollow's House make you even more confident. \nYou become a reknown ghost-hunter, being the first to prove the existence of ghosts!");
+                    } else {
+                        System.out.println(
+                                "You believe in ghosts, but you didn't get any solid evidence from Hollow's House. \nYou begin your new life mission to prove their existence, traveling to every haunted house you can find.");
+                    }
                 } else if (ghostResponse.equals("NO")) {
-                    System.out.println("Ghosts aren't");
+                    if (keys.contains("BROKEN MIRROR") || (keys.equals("BABY DOLL")) || (keys.equals("RUSTY KNIFE"))
+                            || (keys.equals("DUFFLE BAG"))) {
+                        System.out.println(
+                                "You don't believe in ghosts, but some of the objects you interacted with may imply otherwise. \nYou may come to regret that. \nBut you don't know that. You don't believe in them.");
+                    } else {
+                        System.out.println(
+                                "You don't believe in ghosts and nothing in Hollow's House seemed to imply otherwise. \nYou give up ghost-hunting as you no longer see a need to continue.");
+                    }
                 } else {
                     System.out.println("Sorry, I didn't understand that. Do you think ghosts exist?");
                 }

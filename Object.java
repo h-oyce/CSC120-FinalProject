@@ -49,7 +49,7 @@ public class Object {
             return "A rusty olf knife sits on the kitchen counter. The blade is completely brown and bumpy, and the wooden handle is nearly falling off. \n You pick it up to examine it. Flipping it over, a thick black liquid begins to ooze off of it \n You put it back down and whip you hands off. What is that stuff?";
         } else if (this.roomObjects.equals("OLD NEWSPAPER \n")) {
             return "A rolled up newspaper sits on the dining table. You pick it up and unroll it to read. \n The top says THE CLAREFIELD CHRONICLE. Its the paper from July 9, 1952. \n There's an advertisement on the front page stating this house is on sale.";
-        } else if (this.roomObjects.equals("CREAKY CHAIR \n")) {
+        } else if (this.roomObjects.equals("CREAKING CHAIR \n")) {
             return "You approach the chair on the side of the room. The floor squeaks underneath your feet. \n The wood has water damage all over, but nothing else really stands out. ";
         } else if (this.roomObjects.equals("DUFFLE BAG \n")) {
             return "You walk to the back corner where a large duffle bag is placed on the floor. You avoid the black puddle around it. The bag is fill of something, seeming like it'd rip apart if it was filled anymore. \n As you crouch down to examine further, you think you see something move. \n You take a step back. ";
