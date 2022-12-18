@@ -78,7 +78,7 @@ public class GameLoop {
 
         // Instructions are sometimes helpful
         System.out.println(
-                "The purpose of this game is to explore Hollow's House. As you explore, you can interact and collect objects as evidence to prove (or disprove) the existence of a ghost. By obtaining enough evidence, you will come out of Hollow's House safe and sound. But if you collect too many objects that are haunted, you will become possessed! Right now you're standing outside of Hollow's House. It appears to be haunted by a ghost. \n");
+                "The purpose of this game is to explore Hollow's House. As you explore, you can interact and collect objects as evidence to prove (or disprove) the existence of a ghost. By obtaining enough evidence, you will come out of Hollow's House safe and sound. But make sure to pay attention as you explore, or you might have a ghost following you from now on. Right now you're standing outside of Hollow's House. It appears to be haunted by a ghost. \n");
 
         /*
          * if yes then use P1 if no then use P2 <==================================
