@@ -261,7 +261,7 @@ public class GameLoop {
                     }
                     userResponse = userInput.nextLine().toUpperCase();
 
-                    System.out.println("Would you like to keep exploring? Press Enter"); // will print out the list of
+                    System.out.println("Would you like to keep exploring? Press Enter to continue or type NO to stop."); // will print out the list of
                                                                                          // rooms if Player enters YES
                     continueExploring = userInput.nextLine().toUpperCase();
                     if (continueExploring.equals("NO")) {
