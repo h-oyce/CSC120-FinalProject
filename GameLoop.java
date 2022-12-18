@@ -274,7 +274,7 @@ public class GameLoop {
                 System.out
                         .println("\n Here's everything you experienced in Hollow's House \n"
                                 + Investigator.printMemory());
-                System.out.println("Do you believe in ghosts?\n");
+                System.out.println("\n Do you believe in ghosts?\n");
                 String ghostResponse = userInput.nextLine().toUpperCase();
                 Hashtable memory = Investigator.giveMemory();
                 Set<java.lang.String> keys = memory.keySet();
