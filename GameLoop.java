@@ -247,11 +247,18 @@ public class GameLoop {
                         System.out.println(grandfatherclock.action());
                         Investigator.addMemory(userResponse, grandfatherclock.action());
                         System.out.println("\n" + "PRESS ENTER");
+                    
 
                     } else if (userResponse.equals("BACK")) {
                         System.out.println(
                                 "\n" + "If you would like to try a different room, keep exploring. Press Enter");
-                    }
+
+
+                    }else if (userResponse.equals("HELP")) {
+                        System.out.println("\n" + ">To start the game you must type ENTER HOUSE in the terminal. Once started you will be in the house Foyer and will be given 4 room options to explore." + "\n" + ">To choose a room and explore you must enter the name of one of these 4 room options : THE ATTIC, SALLY'S ROOM, THE KITCHEN, or THE BASEMENT." +"\n"+ "After choosing a room, you will be given a description of the room and a list of collectable objects." +"\n"+ "To collect an object the player must enter it's name. To continue exploring after collecting an object you will need to type in ENTER." +"\n"+ "When you are finished looking through the house's rooms and collecting objects you can type in NO when asked the Would you like to keep exploring question. This will take us to the end of the game where your final choice based on your collected evidence will determine your fate.");}
+
+
+                    
 
                     else {
                         System.out.println(
